@@ -2,6 +2,12 @@ let swarm = [];
 var num;
 let H3 = 0;
 
+let link;
+let next; 
+let link1;
+let link2;
+let link3;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB, 360, 100, 100, 100);
@@ -10,11 +16,27 @@ function setup() {
   for (let i = 0; i < num; i++){
     swarm.push(new Element())
   }
+  link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
+  link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 }
 
 function draw() {
   background(random(30), 3);
-  
+  //choice
+  let choice = int(random(0, 2));;  
+  if ( choice == 0){
+     link = link1;
+      }
+  if (choice == 1){
+      link = link2;
+    }  
+
+
+if (frameCount == 500){
+  next = createButton('next').parent(link); 
+  next.position(width*.75, height*.75);
+}
+
   push();
   let inc = random(-2,2);
   translate(width*.5+inc, height*.5+inc);
