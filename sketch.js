@@ -4,9 +4,9 @@ let H3 = 0;
 
 let link;
 let next; 
-let link1;
-let link2;
-let link3;
+//let link1;
+//let link2;
+//let link3;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -16,21 +16,22 @@ function setup() {
   for (let i = 0; i < num; i++){
     swarm.push(new Element())
   }
-  link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
-  link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
+  link = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
+  //link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
+  //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 }
 
 function draw() {
   background(random(30), 3);
   //choice
+  /*
   let choice = int(random(0, 2));;  
   if ( choice == 0){
      link = link1;
       }
   if (choice == 1){
       link = link2;
-    }  
-
+    }*/  
 
 if (frameCount == 500){
   next = createButton('next').parent(link); 
