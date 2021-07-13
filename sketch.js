@@ -1,3 +1,6 @@
+let heartRate;
+let list1 = [];
+
 let swarm = [];
 var num;
 let H3 = 0;
@@ -7,6 +10,10 @@ let next;
 //let link1;
 //let link2;
 //let link3;
+
+function preload(){
+
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
