@@ -17,9 +17,9 @@ var num;
 
 
 function preload(){
-  //list1 = loadStrings('glidDriveList.txt');
+  list1 = loadStrings('glidDriveList.txt');
   txt = loadStrings('glibDrive.txt');
-  heartRate = loadJSON('data/heart_rate-2020-05-01.json');
+  //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
   
 }
 
@@ -31,9 +31,9 @@ function setup() {
   num = height*.3;
   j = 0;
   //console.log(list1);
-  //let day = int(random(0,131));
-  //heartRate = loadJSON(list1[day]);
-  //console.log(list1[day])
+  let day = int(random(0,131));
+  heartRate = loadJSON(list1[day]);
+  console.log(list1[day])
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
   
   for (let i = 0; i < num; i++){
