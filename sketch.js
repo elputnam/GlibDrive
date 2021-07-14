@@ -4,6 +4,8 @@ let list1;
 let sec = 0;
 let txt;
 let j;
+//
+
 
 let swarm = [];
 var num;
@@ -32,9 +34,9 @@ function setup() {
   j = 0;
   //console.log(list1);
   let day = int(random(1,131));
-  //heartRate = loadJSON(list1[day]);
+  heartRate = loadJSON(list1[day]);
   console.log(list1[day])
-  heartRate = loadJSON('data/heart_rate-2020-05-01.json')
+  //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
   
   for (let i = 0; i < num; i++){
     swarm.push(new Element())
