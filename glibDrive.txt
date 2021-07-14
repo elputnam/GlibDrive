@@ -3,7 +3,8 @@ body
 is the
 database
 of 
-lived experience
+lived 
+experience
 
 
 Each
@@ -27,7 +28,7 @@ fiber
 Each
 horomonal
 release
-Eash
+Each
 neuron
 flash
 Each
