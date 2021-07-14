@@ -35,7 +35,7 @@ function setup() {
   j = 0;
   //console.log(list1);
   let day = int(random(1,131));
-  heartRate = loadJSON(list1[10]);
+  heartRate = loadJSON(list1[day]);
   console.log(list1[10])
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
   
