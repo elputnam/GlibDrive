@@ -98,9 +98,10 @@ if (frameCount == 500){
   for (let i = 0; i < swarm.length; i++){
     noStroke();
     //color blend based on mouse location
-    let col1 = map(mouseX, 0, width, 250, 360);
-    let col2 = map(mouseY, 0, height, 0, 150);
-    let H3 = lerp(col1, col2, 0.50);
+    let col1 = map(mouseX, 0, width, 0, 360);
+    let col2 = map(mouseY, 0, height, 360, 0);
+    let blender = map(mouseX, 0, width, 0, 1);
+    let H3 = lerp(col1, col2, blender);
     fill(H3, random(100), random(100))
     swarm[i].oscillate();
     swarm[i].display();
