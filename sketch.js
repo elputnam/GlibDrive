@@ -28,8 +28,6 @@ function preload(){
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
 }
 
-
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB, 360, 100, 100, 100);
@@ -135,10 +133,6 @@ function screens(){
   pop();
 }
 
-function heartFetch(){
-  bpm = heartRate[B]['value']['bpm'];
-}
-
 function overlay(){
   let w = width - (200);
   let h = height - (200);
@@ -163,5 +157,5 @@ class Element{
     let x = sin(this.angle.x) * this.amp.x;
     let y = sin(this.angle.y) * this.amp.y;
     ellipse(mouseX + x, mouseY + y, random(10));
-}
+ }
 }
