@@ -57,7 +57,7 @@ function setup() {
 function draw() {
   background(random(30), 10);
   //heartFetch();
-  debugger
+  // debugger
   bpm = heartRate[B]['value']['bpm'];
   let colA = map(bpm, 60, 170, 0, 360);
   let colB = map(bpm, 60, 170, 360, 0);
