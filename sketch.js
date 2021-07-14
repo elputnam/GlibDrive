@@ -4,6 +4,8 @@ let list1 = [];
 let sec = 0;
 let txt = [];
 let j = 0;
+let colA = 0;
+let colB = 300;
 
 
 
@@ -23,7 +25,6 @@ function preload(){
   list1 = loadStrings('glibDriveList.txt');
   txt = loadStrings('glibDrive.txt');
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
-  
 }
 
 
@@ -58,10 +59,12 @@ function draw() {
   background(random(30), 10);
   //heartFetch();
   // debugger
-  bpm = heartRate[B]['value']['bpm'];
-  let colA = map(bpm, 60, 170, 0, 360);
-  let colB = map(bpm, 60, 170, 360, 0);
-  B += 1;
+  if (frameCount >= 500){
+    bpm = heartRate[B]['value']['bpm'];
+    let colA = map(bpm, 60, 170, 0, 360);
+    let colB = map(bpm, 60, 170, 360, 0);
+    B += 1;
+  }
   
   //choice
   /*
