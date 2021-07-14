@@ -31,7 +31,7 @@ function setup() {
   num = height*.3;
   j = 0;
   //console.log(list1);
-  let day = int(random(0,131));
+  let day = int(random(0,139));
   heartRate = loadJSON(list1[day]);
   console.log(list1[day])
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
@@ -55,9 +55,6 @@ function draw() {
   let colB = map(bpm, 60, 170, 360, 0);
   B += 1;
   
-  if (B => heartRate.length){
-    B = 0
-  };
   //choice
   /*
   let choice = int(random(0, 2));;  
