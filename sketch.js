@@ -19,6 +19,7 @@ var num;
 
 
 function preload(){
+  //Load list of json file names
   list1 = loadStrings('glibDriveList.txt');
   txt = loadStrings('glibDrive.txt');
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
@@ -34,15 +35,16 @@ function setup() {
   num = height*.3;
   j = 0;
   //console.log(list1);
+  //call random file name (not working)
   let day = int(random(1,131));
-  heartRate = loadJSON(list1[day]);
+  //heartRate = loadJSON(list1[day])
+  heartRate = loadJSON(list1[10])
   console.log(list1[day])
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
   
   for (let i = 0; i < num; i++){
     swarm.push(new Element())
   }
-   console.log(list1);
 
 
   
