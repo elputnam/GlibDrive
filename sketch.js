@@ -55,9 +55,6 @@ function draw() {
   let colB = map(bpm, 60, 170, 360, 0);
   B += 1;
   
-  if (B => heartRate.length){
-    B = 0
-  };
   //choice
   /*
   let choice = int(random(0, 2));;  
