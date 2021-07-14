@@ -37,9 +37,10 @@ function setup() {
   //console.log(list1);
   //call random file name (not working)
   let day = int(random(1,131));
-  //heartRate = loadJSON(list1[day])
-  heartRate = loadJSON(list1[10])
-  console.log(list1[day])
+  //heartRate = loadJSON(list1[day]);
+  heartRate = loadJSON(list1[10]);
+  //console.log(list1[day]);
+  console.log(list1[10]);
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
   
   for (let i = 0; i < num; i++){
