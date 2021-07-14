@@ -5,8 +5,8 @@ let swarm = [];
 var num;
 let H3 = 0;
 
-let link;
-let next; 
+//let link;
+//let next; 
 //let link1;
 //let link2;
 //let link3;
@@ -23,7 +23,7 @@ function setup() {
   for (let i = 0; i < num; i++){
     swarm.push(new Element())
   }
-  link = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
+  //link = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
   //link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 }
@@ -39,11 +39,11 @@ function draw() {
   if (choice == 1){
       link = link2;
     }*/  
-
+/*
 if (frameCount == 500){
   next = createButton('next').parent(link); 
   next.position(width*.25, height*.75);
-}
+}*/
 
   push();
   let inc = random(-2,2);
