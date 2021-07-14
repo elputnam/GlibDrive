@@ -59,10 +59,11 @@ function draw() {
   background(random(30), 10);
   //heartFetch();
   // debugger
+  print(frameCount);
   if (frameCount >= 500){
     bpm = heartRate[B]['value']['bpm'];
-    let colA = map(bpm, 60, 170, 0, 360);
-    let colB = map(bpm, 60, 170, 360, 0);
+    colA = map(bpm, 60, 170, 0, 360);
+    colB = map(bpm, 60, 170, 360, 0);
     B += 1;
   }
   
