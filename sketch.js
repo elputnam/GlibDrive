@@ -50,7 +50,8 @@ function setup() {
 
 function draw() {
   background(random(30), 10);
-  heartFetch();
+  //heartFetch();
+  bpm = heartRate[B]['value']['bpm'];
   let colA = map(bpm, 60, 170, 0, 360);
   let colB = map(bpm, 60, 170, 360, 0);
   B += 1;
@@ -118,7 +119,7 @@ if (frameCount == 500){
 
 
 function heartFetch(){
-  bpm = heartRate[B]['value']['bpm']
+  bpm = heartRate[B]['value']['bpm'];
 }
 
 function overlay(){
@@ -144,8 +145,6 @@ class Element{
   display() {
     let x = sin(this.angle.x) * this.amp.x;
     let y = sin(this.angle.y) * this.amp.y;
-
-    ;
     ellipse(mouseX + x, mouseY + y, random(10));
 }
 }
