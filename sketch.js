@@ -61,8 +61,8 @@ function draw() {
   //heartFetch();
   // debugger
   print(frameCount);
-  if (frameCount >= 350){
-    bpm = heartRate[B]['value']['bpm'];
+  if (frameCount >= 175){
+    bpm = heartRate[B].value['bpm'];
     colA = map(bpm, 60, 170, 0, 360);
     colB = map(bpm, 60, 170, 360, 0);
     B += 1;
