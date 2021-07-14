@@ -60,7 +60,7 @@ function draw() {
   //heartFetch();
   // debugger
   print(frameCount);
-  if (frameCount >= 500){
+  if (frameCount >= 200){
     bpm = heartRate[B]['value']['bpm'];
     colA = map(bpm, 60, 170, 0, 360);
     colB = map(bpm, 60, 170, 360, 0);
