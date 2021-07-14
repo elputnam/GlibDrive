@@ -6,6 +6,7 @@ let txt = [];
 let j = 0;
 let colA = 0;
 let colB = 300;
+let tau = 0;
 
 
 
@@ -60,11 +61,20 @@ function draw() {
   //heartFetch();
   // debugger
   print(frameCount);
-  if (frameCount >= 200){
+  if (frameCount >= 350){
     bpm = heartRate[B]['value']['bpm'];
     colA = map(bpm, 60, 170, 0, 360);
     colB = map(bpm, 60, 170, 360, 0);
     B += 1;
+
+    push();
+    let inc = random(-2,2);
+    translate(width*.5+inc, height*.5+inc);
+    inc += inc;
+    let num = 300;
+    tau = (360/num) * (frameCount % num);
+    screens();
+    pop();
   }
   
   //choice
@@ -82,31 +92,7 @@ if (frameCount == 500){
   next.position(width*.25, height*.75);
 }*/
 
-  push();
-  let inc = random(-2,2);
-  translate(width*.5+inc, height*.5+inc);
-  inc += inc;
-  let num = 300;
-  let tau = (360/num) * (frameCount % num);
 
-  //shape 1
-  strokeWeight(1);
-  push();
-  //let H1 = (map(mouseX, 0, width, 300, 200));
-  rotate(radians(-tau));
-  stroke(colA, 100, 100);
-  overlay();
-  pop();
-
-  //shape 2
-  push();
-  //let H2 = (map(mouseX, 0, height, 250, 340));
-  stroke(colB, random(100), random(100));
-  scale(0.65);
-  rotate(radians(tau));
-  overlay();
-  pop();
-  pop();
 
   //circleSwarm
   for (let i = 0; i < swarm.length; i++){
@@ -128,6 +114,25 @@ if (frameCount == 500){
 }
 
 
+function screens(){
+  //shape 1
+  strokeWeight(1);
+  push();
+  //let H1 = (map(mouseX, 0, width, 300, 200));
+  rotate(radians(-tau));
+  stroke(colA, 100, 100);
+  overlay();
+  pop();
+
+  //shape 2
+  push();
+  //let H2 = (map(mouseX, 0, height, 250, 340));
+  stroke(colB, random(100), random(100));
+  scale(0.65);
+  rotate(radians(tau));
+  overlay();
+  pop();
+}
 
 function heartFetch(){
   bpm = heartRate[B]['value']['bpm'];
