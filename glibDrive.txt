@@ -48,7 +48,8 @@ imprint.
 
 The
 colors
-of squares
+of the
+rectangles
 change
 in correlation
 with my
