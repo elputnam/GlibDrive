@@ -17,7 +17,7 @@ var num;
 
 
 function preload(){
-  list1 = loadStrings('glidDriveList.txt');
+  list1 = loadStrings('glibDriveList.txt');
   txt = loadStrings('glibDrive.txt');
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
   
