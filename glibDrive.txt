@@ -43,7 +43,7 @@ and
 reaction
 leaves 
 a
-mark
+mark, 
 an
 imprint.
 
