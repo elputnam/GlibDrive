@@ -9,13 +9,12 @@ let colB = 300;
 let tau = 0;
 
 
-
 let swarm = [];
 var num;
 //let H3 = 0;
 
-//let link;
-//let next; 
+let link;
+let next; 
 //let link1;
 //let link2;
 //let link3;
@@ -31,7 +30,7 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB, 360, 100, 100, 100);
-  frameRate(20);
+  frameRate(15);
   num = height*.3;
   j = 0;
   //console.log(list1);
@@ -49,7 +48,7 @@ function setup() {
 
 
   
-  //link = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
+  link = createA('https://fleshcircuit.github.io/AtTheEndOf/', '');
   //link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 }
@@ -59,7 +58,8 @@ function draw() {
   //heartFetch();
   // debugger
   print(frameCount);
-  if (frameCount >= 175){
+ 
+  if (frameCount >= 300){
     bpm = heartRate[B].value['bpm'];
     colA = map(bpm, 60, 170, 0, 360);
     colB = map(bpm, 60, 170, 360, 0);
@@ -84,11 +84,11 @@ function draw() {
   if (choice == 1){
       link = link2;
     }*/  
-/*
-if (frameCount == 500){
+
+if (frameCount == 1700){
   next = createButton('next').parent(link); 
-  next.position(width*.25, height*.75);
-}*/
+  next.position(width*.1, height*.1);
+}
 
 
 
@@ -109,7 +109,11 @@ if (frameCount == 500){
     if (H3 >= 360){
       H3 = 0;
   }*/
-  glibDriveText();
+
+  if (frameCount >= 100){
+    glibDriveText();
+  }
+  
 }
 
 
