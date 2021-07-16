@@ -85,7 +85,7 @@ function draw() {
       link = link2;
     }*/  
 
-if (frameCount == 1700){
+if (frameCount == 1750){
   next = createButton('next').parent(link); 
   next.position(width*.1, height*.1);
 }
