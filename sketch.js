@@ -7,7 +7,7 @@ let j = 0;
 let colA = 0;
 let colB = 300;
 let tau = 0;
-
+var voice = new p5.Speech();
 
 let swarm = [];
 var num;
@@ -23,7 +23,8 @@ let next;
 function preload(){
   //Load list of json file names
   list1 = loadStrings('glibDriveList.txt');
-  txt = loadStrings('glibDrive.txt');
+  txt1 = loadStrings('glibDrive.txt');
+  txt2 = loadStrings('glibDrive.txt');
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
 }
 
@@ -46,8 +47,8 @@ function setup() {
     swarm.push(new Element())
   }
 
-
   
+  //button
   link = createA('https://fleshcircuit.github.io/AtTheEndOf/', '');
   //link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
@@ -59,7 +60,7 @@ function draw() {
   // debugger
   print(frameCount);
  
-  if (frameCount >= 300){
+  if (frameCount >= 350){
     bpm = heartRate[B].value['bpm'];
     colA = map(bpm, 60, 170, 0, 360);
     colB = map(bpm, 60, 170, 360, 0);
@@ -85,7 +86,7 @@ function draw() {
       link = link2;
     }*/  
 
-if (frameCount == 1700){
+if (frameCount == 2300){
   next = createButton('next').parent(link); 
   next.position(width*.1, height*.1);
 }
