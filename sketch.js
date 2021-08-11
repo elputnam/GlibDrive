@@ -48,7 +48,7 @@ function setup() {
 
 
   
-  link = createA('https://fleshcircuit.github.io/AtTheEndOf/', '');
+  link = createA('https://elputnam.github.io/AtTheEndOf/', '');
   //link1 = createA('http://127.0.0.1:5501/PeatBramble/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 }
