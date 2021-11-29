@@ -129,7 +129,7 @@ function draw() {
   }
 
   capturer.capture(document.getElementById('defaultCanvas0')); 
-  if (frameCount==3000){
+  if (frameCount==2500){
     save_record();
   }
 

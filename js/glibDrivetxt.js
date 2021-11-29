@@ -1,6 +1,6 @@
 function glibDriveText(){
     if (frameCount%19==0 ){
-    textSize(75);
+    textSize(200);
     noStroke();
     fill(200);
     textFont('VT323');
