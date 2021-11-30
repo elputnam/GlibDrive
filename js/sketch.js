@@ -43,7 +43,7 @@ function setup() {
   //console.log(list1);
   //call random file name (not working)
   let day = int(random(1,131));
-  heartRate = loadJSON(list1[day]);
+  heartRate = loadJSON(list1[54]);
   //heartRate = loadJSON(list1[10]);
   console.log(list1[day]);
   //console.log(list1[10]);
