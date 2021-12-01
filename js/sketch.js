@@ -1,5 +1,5 @@
 let heartRate = [];
-let B = 0;
+let B = 3200;
 let list1 = [];
 let sec = 0;
 let txt = [];
@@ -27,10 +27,10 @@ var btn1;
 
 function preload(){
   //Load list of json file names
-  list1 = loadStrings('glibDriveList.txt');
+  // list1 = loadStrings('glibDriveList.txt');
   txt1 = loadStrings('glibDrive.txt');
   txt2 = loadStrings('glibDrive.txt');
-  //heartRate = loadJSON('data/heart_rate-2020-05-01.json');
+  heartRate = loadJSON('data/heart_rate-2020-07-24.json');
 }
 
 function setup() {
@@ -42,10 +42,10 @@ function setup() {
   j = 0;
   //console.log(list1);
   //call random file name (not working)
-  let day = int(random(1,131));
-  heartRate = loadJSON(list1[54]);
+  // let day = int(random(1,131));
+  // heartRate = loadJSON(list1[122]);
   //heartRate = loadJSON(list1[10]);
-  console.log(list1[day]);
+  // console.log(list1[day]);
   //console.log(list1[10]);
   //heartRate = loadJSON('data/heart_rate-2020-05-01.json')
   
@@ -72,15 +72,16 @@ function draw() {
   // debugger
   print(frameCount);
  
-  if (frameCount >= 350){
+  if (frameCount >= 250){
     bpm = heartRate[B].value['bpm'];
-    colA = map(bpm, 60, 170, 0, 175);
-    colB = map(bpm, 60, 170, 175, 0);
+    print(bpm);
+    colA = map(bpm, 50, 150, 0, 175);
+    colB = map(bpm, 50, 150, 175, 0);
     B += 1;
 
     push();
     let inc = random(-2,2);
-    translate(width*.5+inc, height*.5+inc);
+    translate(width*.65+inc, height*.5+inc);
     inc += inc;
     let num = 300;
     tau = (360/num) * (frameCount % num);
@@ -157,8 +158,8 @@ function screens(){
 }
 
 function overlay(){
-  let w = width - (200);
-  let h = height - (200);
+  let w = width*.75 - (200);
+  let h = height*.75 - (200);
   for (let i = -w / 2; i < w/2; i+=5){
 
     line(i, -h /2 , i, h/2 );
