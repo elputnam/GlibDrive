@@ -163,3 +163,7 @@ class Element{
     ellipse(mouseX + x, mouseY + y, random(10));
  }
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
